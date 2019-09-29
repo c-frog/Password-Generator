@@ -11,17 +11,24 @@ function generate(num, type) {
     
     // 
     for (var i = 0; i < length; ++i) {
-        if (pwdType === "letters" || "Letters") {
+        if (pwdType === "letters" || pwdType === 'Letters') {
             pwd += letterSet.charAt(Math.floor(Math.random() * letterSet.length));
-        } else if (pwdType === "numbers" || "numbers") {
+        } else if (pwdType === "numbers" || pwdType === "Numbers") {
             pwd += numSet.charAt(Math.floor(Math.random() * numSet.length));
-        }   else if (pwdType === "special"  || "special characters" || "Special characters") {
+        }   else if (pwdType === "special" || pwdType === "Special") {
             pwd += specSet.charAt(Math.floor(Math.random() * specSet.length));
-        } else {
-            pwd += mixSet.charAt(Math.floor(Math.random() * mixSet.length));
-        }
+            } else if (pwdType === "a mix" || pwdType === "mixed" || pwdType === 'mix'){
+                pwd += mixSet.charAt(Math.floor(Math.random() * mixSet.length));
+            } else confirm ('Not a valide option!')
+                
     }
     document.getElementById("displaybox").value = pwd;
 }
 
+function copy () {
+    var copyText = document.querySelector("#displaybox");
+    copyText.select();
+    document.execCommand("copy")
+}
 
+    document.querySelector('#copy').addEventListener('click', copy);

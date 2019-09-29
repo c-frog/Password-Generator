@@ -1,17 +1,21 @@
 /* HEADER */
+
 header {
+    display: flex;
     margin: 5%;
     text-align: center;
+    justify-content: center;
 }
     h1 {
         font-family: monospace;
         font-size: 26pt;
-        margin-top: 10%;
+        border-style: outset;
+        border-radius: 14px;
+        border-color: dodgerblue;
+        background: lightgray;
+        width: 60%;
     }
     
-
-
-
 /* PASSWORD GENERATOR */
 
 textarea {
@@ -19,6 +23,10 @@ textarea {
     margin: 5% 10%;
     height: 8em;
     font-size: 18pt;
+    border-style: outset;
+    border-width: 3px;
+    border-radius: 8px;
+    border-color: dodgerblue;
 }
 
 .buttons {
@@ -26,12 +34,18 @@ textarea {
 }
 
 body {
-    background-color: lightgrey;
+    background-color: dimgray;
 }
+
+/* BUTTONS */
 
 button {
     height: 4em;
     width: 18em;
     font-family: monospace;
     font-size: 12pt;
+    border-style: outset;
+    border-width: 1.5px;
+    border-radius: 8px;
+    border-color: dodgerblue;
 }
