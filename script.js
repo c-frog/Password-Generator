@@ -25,7 +25,7 @@ function generate(num, type) {
     }
     document.getElementById("displaybox").value = pwd;
 }
-// copy to clipboard
+
 function copy () {
     var copyText = document.querySelector("#displaybox");
     copyText.select();
@@ -33,3 +33,4 @@ function copy () {
 }
 
     document.querySelector('#copy').addEventListener('click', copy);
+    
