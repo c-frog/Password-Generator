@@ -9,22 +9,23 @@ function generate(num, type) {
     var mixSet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_"
     var pwd = "";
     
-    // 
     for (var i = 0; i < length; ++i) {
         if (pwdType === "letters" || pwdType === 'Letters') {
             pwd += letterSet.charAt(Math.floor(Math.random() * letterSet.length));
-        } else if (pwdType === "numbers" || pwdType === "Numbers") {
-            pwd += numSet.charAt(Math.floor(Math.random() * numSet.length));
-        }   else if (pwdType === "special" || pwdType === "Special") {
-            pwd += specSet.charAt(Math.floor(Math.random() * specSet.length));
-            } else if (pwdType === "a mix" || pwdType === "mixed" || pwdType === 'mix'){
-                pwd += mixSet.charAt(Math.floor(Math.random() * mixSet.length));
-            } else confirm ('Not a valide option!')
-                
+            } else if (pwdType === "numbers" || pwdType === "Numbers") {
+                pwd += numSet.charAt(Math.floor(Math.random() * numSet.length));
+                } else if (pwdType === "special" || pwdType === "Special") {
+                    pwd += specSet.charAt(Math.floor(Math.random() * specSet.length));
+                    } else if (pwdType === "a mix" || pwdType === "mixed" || pwdType === 'mix'){
+                        pwd += mixSet.charAt(Math.floor(Math.random() * mixSet.length));
+                        } else {
+                            confirm("Not a valid option!")
+                            break;
+                        }
     }
     document.getElementById("displaybox").value = pwd;
 }
-
+// copy to clipboard
 function copy () {
     var copyText = document.querySelector("#displaybox");
     copyText.select();
