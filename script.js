@@ -2,7 +2,7 @@
 function generate(num, type) {
     // var's for user criteria and password perameters
     var length = prompt ("Choose a password length between 8 and 120.");
-    var pwdType = prompt ("Would you like letters, numbers, special characters, or a mix?");
+    var pwdType = prompt ("Choose between 'Letters', 'Numbers', 'Special', or a mix");
     var letterSet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var numSet = "1234567890";
     var specSet = "!@#$%^&*()_";
